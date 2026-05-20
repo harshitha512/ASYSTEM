@@ -1,0 +1,16 @@
+const r = require('express').Router();
+const c = require('../controllers/shiftRotationController');
+const { authenticate } = require('../middleware/auth');
+r.use(authenticate);
+r.get('/dept-restrictions', c.getDeptRestrictions);
+r.post('/dept-restrictions', c.addDeptRestriction);
+r.delete('/dept-restrictions/:id', c.removeDeptRestriction);
+r.get('/rotation', c.getRotationSchedule);
+r.post('/rotation/generate', c.generateWeeklyRotation);
+r.put('/rotation/:id/approve', c.approveRotation);
+r.put('/rotation/:id/reject', c.rejectRotation);
+r.get('/change-requests', c.getChangeRequests);
+r.post('/change-requests', c.createChangeRequest);
+r.put('/change-requests/:id/approve', c.approveChangeRequest);
+r.put('/change-requests/:id/reject', c.rejectChangeRequest);
+module.exports = r;

@@ -1,0 +1,12 @@
+const r = require('express').Router();
+const c = require('../controllers/reportController');
+const { authenticate } = require('../middleware/auth');
+r.use(authenticate);
+r.get('/daily', c.dailyReport);
+r.get('/monthly', c.monthlyReport);
+r.get('/shift-wise', c.shiftWiseReport);
+r.get('/absent-8day', c.absentEightDayReport);
+r.get('/leave-monitor', c.leaveMonitorReport);
+r.get('/late-early', c.lateEarlyReport);
+r.get('/export', c.exportCSV);
+module.exports = r;
