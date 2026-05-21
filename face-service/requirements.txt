@@ -6,3 +6,4 @@ dlib
 Pillow
 requests
 python-dotenv
+mysql-connector-python
