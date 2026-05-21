@@ -1,9 +1,8 @@
-blinker==1.9.0
-click==8.3.3
-colorama==0.4.6
-face_recognition_models @ git+https://github.com/ageitgey/face_recognition_models@e67de717267507d1e9246de95692eb8be736ab61
-Flask==3.1.3
-itsdangerous==2.2.0
-Jinja2==3.1.6
-MarkupSafe==3.0.3
-Werkzeug==3.1.8
+flask==3.1.3
+numpy
+opencv-python-headless
+face-recognition
+dlib
+Pillow
+requests
+python-dotenv
