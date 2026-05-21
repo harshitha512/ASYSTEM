@@ -3,4 +3,4 @@ builder = "nixpacks"
 buildCommand = "npm run build"
 
 [deploy]
-startCommand = "npm run preview -- --host 0.0.0.0 --port 8080"
+startCommand = "npx serve dist -l 8080"
